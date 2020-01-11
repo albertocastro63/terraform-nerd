@@ -18,16 +18,16 @@ resource "aws_security_group" "ec2_security_group" {
   }
 
   ingress {
-    protocol  = "tcp"
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-    from_port = 22
-    to_port   = 22
+    from_port   = 22
+    to_port     = 22
   }
 }
 
 resource "aws_instance" "myapp" {
-  ami = var.ami_id
-  instance_type = var.type
-  key_name = var.key_name
+  ami                    = var.ami_id
+  instance_type          = var.type
+  key_name               = var.key_name
   vpc_security_group_ids = [aws_security_group.ec2_security_group.id]
 }

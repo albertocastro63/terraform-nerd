@@ -9,14 +9,14 @@ provider "aws" {
 
 variable "ami_id" {
   description = "Id for the machine image to use to create the ec2 instance"
-  type = string
-  default = "ami-00068cd7555f543d5"
+  type        = string
+  default     = "ami-00068cd7555f543d5"
 }
 
 variable "type" {
   description = "Type of instance in AWS to create."
-  type = string
-  default = "t2.micro"
+  type        = string
+  default     = "t2.micro"
 }
 
 variable "key_name" {
@@ -24,9 +24,9 @@ variable "key_name" {
 }
 
 resource "aws_instance" "myapp" {
-  ami = var.ami_id
+  ami           = var.ami_id
   instance_type = var.type
-  key_name = var.key_name
+  key_name      = var.key_name
 }
 
 output "public_ip" {

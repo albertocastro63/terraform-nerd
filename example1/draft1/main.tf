@@ -8,7 +8,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "myapp" {
-  ami = "ami-00068cd7555f543d5"
+  ami           = "ami-00068cd7555f543d5"
   instance_type = "t2.micro"
-  key_name = "terraform_nerd"
+  key_name      = "terraform_nerd"
 }
