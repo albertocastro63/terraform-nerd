@@ -33,7 +33,7 @@ Building on the previous example we start creating re-usable modules. A security
 ```bash
 terraform fmt
 ```
-- To format all the files for the rut and child directories execute:
+- To format all the files for the current and child directories execute:
 ```bash
 find . -type d -exec terraform fmt '{}' \;
 ```
