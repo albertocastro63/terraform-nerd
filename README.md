@@ -34,7 +34,7 @@ We will re-create the infrastructure built over the previous examples and add th
 
 ![Final Diagram](/resources/Final_Diagram.png)
 
-We will use modules from the ![Terraform Registry](https://registry.terraform.io/), in particular:
+We will use modules from the [Terraform Registry](https://registry.terraform.io/), in particular:
 
 1. [AWS VPC Module](https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws)
 2. [AWS Security Group](https://registry.terraform.io/modules/terraform-aws-modules/security-group/aws)
