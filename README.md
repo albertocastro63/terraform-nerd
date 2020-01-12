@@ -30,9 +30,18 @@ Building on the previous example we start creating re-usable modules. A security
 
 ## Example 4
 
-We will re-create the infrastructure built over the previous examples and add the final elements to create the infrastructure depicted in the following diagram.
+We will re-create the infrastructure built over the previous examples and add the final elements to create the infrastructure depicted in the following diagram:
 
 ![Final Diagram](/resources/Final_Diagram.png)
+
+We will use modules from the ![Terraform Registry](https://registry.terraform.io/), in particular:
+
+1. ![AWS VPC Module](https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws)
+2. ![AWS Security Group](https://registry.terraform.io/modules/terraform-aws-modules/security-group/aws)
+3. ![AWS Application Load Balancer](https://registry.terraform.io/modules/terraform-aws-modules/alb/aws)
+4. ![AWS Autoscaling Group](https://registry.terraform.io/modules/terraform-aws-modules/autoscaling/aws)
+
+We will continue using the IAM Role, DynamoDB, and S3 modules we created before.
 
 ### Tips
 
@@ -40,7 +49,7 @@ We will re-create the infrastructure built over the previous examples and add th
 ```bash
 terraform fmt
 ```
-- To format all the files for the current and child directories execute:
+- To format all the files for the current and child directories recursively execute:
 ```bash
 find . -type d -exec terraform fmt '{}' \;
 ```
