@@ -36,10 +36,10 @@ We will re-create the infrastructure built over the previous examples and add th
 
 We will use modules from the ![Terraform Registry](https://registry.terraform.io/), in particular:
 
-1. ![AWS VPC Module](https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws)
-2. ![AWS Security Group](https://registry.terraform.io/modules/terraform-aws-modules/security-group/aws)
-3. ![AWS Application Load Balancer](https://registry.terraform.io/modules/terraform-aws-modules/alb/aws)
-4. ![AWS Autoscaling Group](https://registry.terraform.io/modules/terraform-aws-modules/autoscaling/aws)
+1. [AWS VPC Module](https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws)
+2. [AWS Security Group](https://registry.terraform.io/modules/terraform-aws-modules/security-group/aws)
+3. [AWS Application Load Balancer](https://registry.terraform.io/modules/terraform-aws-modules/alb/aws)
+4. [AWS Autoscaling Group](https://registry.terraform.io/modules/terraform-aws-modules/autoscaling/aws)
 
 We will continue using the IAM Role, DynamoDB, and S3 modules we created before.
 
