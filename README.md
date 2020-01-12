@@ -22,14 +22,15 @@ Building on the previous example we start creating re-usable modules. A security
 
 **draft2**: Rewrite the security group module to abstract the ingress and egress rules so they can be specified parametrically in the calling script. Add one more instance and one more security group to the mix.
 
-**draft3**: A DynamoDB table was created and an IAM Role that is applied to the EC2 instances so they can access the table. The EC2 module is modified to accept the role input.
-
-**final**: Same as draft3, but here the state has been moved to an external S3 bucket.
+**final**: A DynamoDB table was created and an IAM Role that is applied to the EC2 instances so they can access the table. The EC2 module is modified to accept the role input.
 
 ## Example 3
 
-We will re-create the infrastructure built over the previous examples and add the final elements to create the infrastructure depicted in the following diagram.
+**final**: Same as _Example 2/final_, but here the state has been moved to an external S3 bucket.
 
+## Example 4
+
+We will re-create the infrastructure built over the previous examples and add the final elements to create the infrastructure depicted in the following diagram.
 
 ![Final Diagram](/resources/Final_Diagram.png)
 
