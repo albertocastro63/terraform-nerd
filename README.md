@@ -26,6 +26,12 @@ Building on the previous example we start creating re-usable modules. A security
 
 **final**: Same as draft3, but here the state has been moved to an external S3 bucket.
 
+## Example 3
+
+We will re-create the infrastructure built over the previous examples and add the final elements to create the infrastructure depicted in the following diagram.
+
+
+![Final Diagram](/resources/Final_Diagram.png)
 
 ### Tips
 
