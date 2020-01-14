@@ -53,3 +53,18 @@ terraform fmt
 ```bash
 find . -type d -exec terraform fmt '{}' \;
 ```
+
+- To input optional values with the CLI:
+```bash
+terraform plan -var "my_local_ip=xxx.xxx.xxx.xxx"
+terraform apply -var "my_local_ip=xxx.xxx.xxx.xxx"
+```
+
+- Can also set environment variables with the format `TF_VAR_name`:
+```bash
+export TF_VAR_my_local_ip=xxx.xxx.xxx.xxx
+terraform plan
+terraform apply
+```
+
+- If you want to insert secrets securely you can use [`summon`](https://cyberark.github.io/summon/) this program runs a shell where the secrets are set as environment variables that are retrieved from a secure store. After execution the variables are no longer available.
