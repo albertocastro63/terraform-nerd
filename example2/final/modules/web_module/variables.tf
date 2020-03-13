@@ -36,8 +36,6 @@ variable "dynamodb_table_name" {
   type        = string
 }
 
-variable "web_servers_number" {
-  description = "Number of EC2 instances to deploy for the web server."
-  type = number
-  default = 1
+variable "instance_profile" {
+  description = "Name of the instance profile (with the information for the role) to apply to the ec2 instances."
 }

@@ -2,7 +2,6 @@
  * EC2 instance in AWS creted in terraform (v3).
  */
 
-
 resource "aws_instance" "this" {
   ami                    = var.ami_id
   instance_type          = var.type

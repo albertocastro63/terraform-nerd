@@ -16,5 +16,6 @@ module "staging_web" {
   key_name            = var.key_name
   my_local_ip         = var.my_local_ip
   region_name         = var.region_name
-  type_instance       = var.type_instance
+  type_instance       = var.instance_type
+  instance_profile    = "s3_dynamo_instance_profile"
 }

@@ -14,13 +14,6 @@ module "dynamodb_table" {
   table_name = var.dynamodb_table_name
 }
 
-module "iam_role" {
-  source = "../iam_role"
-
-  dynamodb_table_arn = module.dynamodb_table.table_arn
-  s3_bucket_name     = module.s3_bucket.bucket_name
-}
-
 module "web-security-group" {
   source = "../security_group"
   vpc_id = data.aws_vpc.default_vpc.id
@@ -56,12 +49,12 @@ module "application-security-group" {
 }
 
 module "web-server" {
-  count = var.web_servers_number
   source             = "../ec2instance"
   ami_id             = var.ami_id
   security_group_ids = [module.web-security-group.security_group_id, module.application-security-group.security_group_id]
   type               = var.type_instance
-  instance_profile   = module.iam_role.instance_profile_name
+  instance_profile   = var.instance_profile
+  key_name           = var.key_name
 }
 
 module "application-server" {
@@ -69,5 +62,6 @@ module "application-server" {
   ami_id             = var.ami_id
   security_group_ids = [module.application-security-group.security_group_id]
   type               = var.type_instance
-  instance_profile   = module.iam_role.instance_profile_name
+  instance_profile   = var.instance_profile
+  key_name           = var.key_name
 }

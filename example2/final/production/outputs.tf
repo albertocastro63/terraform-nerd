@@ -29,3 +29,7 @@ output "app_security_group_id" {
 output "bucket_name" {
   value = module.production_web.bucket_name
 }
+
+output "ssh_key_name" {
+  value = var.key_name
+}

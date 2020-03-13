@@ -13,7 +13,7 @@ variable "ami_id" {
   default     = "ami-00068cd7555f543d5"
 }
 
-variable "type_instance" {
+variable "instance_type" {
   description = "Type of instance in AWS to create."
   type        = string
   default     = "t2.micro"
