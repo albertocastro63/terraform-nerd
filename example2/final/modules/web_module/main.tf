@@ -2,6 +2,11 @@
  * Web and Application Servers.
  */
 
+locals {
+  name_web_server = join("-", [var.name_prefix, "web"])
+  name_app_server = join("-", [var.name_prefix, "app"])
+}
+
 module "s3_bucket" {
   source = "../s3_bucket"
 
@@ -35,7 +40,7 @@ module "application-security-group" {
       from_port   = 22
       to_port     = 22
       protocol    = "tcp"
-      cidr_blocks = [join("", [var.my_local_ip, "/32"])]
+      cidr_blocks = [var.my_local_ip]
     }
   ]
   egress_with_cidr_blocks = [
@@ -55,6 +60,7 @@ module "web-server" {
   type               = var.type_instance
   instance_profile   = var.instance_profile
   key_name           = var.key_name
+  name               = local.name_web_server
 }
 
 module "application-server" {
@@ -64,4 +70,5 @@ module "application-server" {
   type               = var.type_instance
   instance_profile   = var.instance_profile
   key_name           = var.key_name
+  name               = local.name_app_server
 }

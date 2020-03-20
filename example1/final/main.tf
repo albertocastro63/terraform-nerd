@@ -30,4 +30,8 @@ resource "aws_instance" "myapp" {
   instance_type          = var.type
   key_name               = var.key_name
   vpc_security_group_ids = [aws_security_group.ec2_security_group.id]
+
+  tags = {
+    Name = "Example 1 / Final"
+  }
 }

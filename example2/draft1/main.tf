@@ -17,4 +17,5 @@ module "web-server" {
   ami_id             = var.ami_id
   security_group_ids = [module.web-security-group.security_group_id]
   type               = var.type
+  name               = "Example 2 / Draft 1"
 }

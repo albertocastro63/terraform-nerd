@@ -27,3 +27,8 @@ variable "instance_profile" {
   description = "Name of the IAM instance profile to apply to the EC2 instance."
   type        = string
 }
+
+variable "name" {
+  description = "Name to tag the instance with."
+  type        = string
+}

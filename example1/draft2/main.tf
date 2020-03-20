@@ -27,6 +27,10 @@ resource "aws_instance" "myapp" {
   ami           = var.ami_id
   instance_type = var.type
   key_name      = var.key_name
+
+  tags = {
+    Name = "Example 1 / Draft 2"
+  }
 }
 
 output "public_ip" {

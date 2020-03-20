@@ -8,4 +8,8 @@ resource "aws_instance" "this" {
   key_name               = var.key_name
   vpc_security_group_ids = var.security_group_ids
   iam_instance_profile   = var.instance_profile
+
+  tags = {
+    Name = var.name
+  }
 }

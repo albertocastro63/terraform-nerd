@@ -28,5 +28,5 @@ variable "instance_type" {
 
 variable "key_name" {
   description = "Key name for the production environment (Note that they key name is not terraform_nerd here.)"
-  default = "terraform_nerd_ohio"
+  default     = "terraform_nerd_ohio"
 }

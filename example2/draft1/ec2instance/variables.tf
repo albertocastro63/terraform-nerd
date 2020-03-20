@@ -21,3 +21,8 @@ variable "security_group_ids" {
   description = "List of ids for security groups to assign to the EC2 instance"
   type        = list(string)
 }
+
+variable "name" {
+  description = "Name to tag the instance with."
+  type        = string
+}

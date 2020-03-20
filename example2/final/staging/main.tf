@@ -18,4 +18,5 @@ module "staging_web" {
   region_name         = var.region_name
   type_instance       = var.instance_type
   instance_profile    = "s3_dynamo_instance_profile"
+  name_prefix         = "Staging"
 }

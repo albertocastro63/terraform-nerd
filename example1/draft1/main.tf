@@ -11,4 +11,8 @@ resource "aws_instance" "myapp" {
   ami           = "ami-00068cd7555f543d5"
   instance_type = "t2.micro"
   key_name      = "terraform_nerd"
+
+  tags = {
+    Name = "Example 1 / Draft 1"
+  }
 }

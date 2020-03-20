@@ -46,6 +46,7 @@ module "web-server" {
   ami_id             = var.ami_id
   security_group_ids = [module.web-security-group.security_group_id]
   type               = var.type_instance
+  name               = "Example 2.2 web"
 }
 
 module "webapp-server" {
@@ -53,6 +54,7 @@ module "webapp-server" {
   ami_id             = var.ami_id
   security_group_ids = [module.web-security-group.security_group_id, module.application-security-group.security_group_id]
   type               = var.type_instance
+  name               = "Example 2.2 - webapp"
 }
 
 module "application-server" {
@@ -60,4 +62,5 @@ module "application-server" {
   ami_id             = var.ami_id
   security_group_ids = [module.application-security-group.security_group_id]
   type               = var.type_instance
+  name               = "Example 2.2 app"
 }

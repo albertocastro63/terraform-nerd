@@ -39,3 +39,8 @@ variable "dynamodb_table_name" {
 variable "instance_profile" {
   description = "Name of the instance profile (with the information for the role) to apply to the ec2 instances."
 }
+
+variable "name_prefix" {
+  description = "Prefix for the name of the servers."
+  type        = string
+}
